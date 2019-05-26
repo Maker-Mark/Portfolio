@@ -58,9 +58,18 @@ body{
   .left img { 
       width: 160px; height: auto; border-radius: 100px 
     }
-  .right { 
+  .main { 
       flex: 1 0 calc(60%); 
+      text-align: justify;
 
+    }
+    .main h2{
+     font-size:  14px;
+    }
+
+    .socials img{
+        height: 60px;
+        width: 60px;
     }
 
   
