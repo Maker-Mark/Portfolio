@@ -79,12 +79,8 @@ ul a {
     text-decoration: none;
     font-size: 24px;
 }
-.socials a {
-    padding-left: 20px;
-}
-
-.socials a.first{
-    padding: 0%;
+i {
+    margin-right: 20px;
 }
 
 .body {
