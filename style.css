@@ -91,14 +91,14 @@ ul a {
 
 .mg-img{
 
-    flex: 1 0 calc(40%);
+    flex: 1 0 calc(45%);
 
 }
 
 .mg-img img{
-    width: 160px;
+    width: 180px;
     height: auto;
-    border-radius: 100px
+    border-radius: 90px
 }
 
 .main {
