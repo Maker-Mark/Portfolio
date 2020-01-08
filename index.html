@@ -75,6 +75,27 @@
     cursor: pointer;
   }
 
+@media only screen and (max-width: 600px) {
+   .skills {
+     display: flex;
+     flex-direction: row;
+     margin: auto;
+    
+  }
+  .skills h3{
+    font-size: 16px;
+  }
+ .skills li {
+   font-size: 13px;
+   justify-content: left;
+
+ }
+ .skills ul{
+   padding-left:1em;
+   padding-right:.5em ;
+ }
+}
+ 
   /* Turn off parallax scrolling for tablets and phones */
   @media only screen and (max-device-width: 1600px) {
 
@@ -129,10 +150,6 @@
       modern technologies and frameworks to develop sustainable code.
       Personally, computers and programming have always been a natural curiosity of mine and continue to be an active
       passion that I share through tutorials, blog posts, and talks.
-
-
-
-
     </p>
     <div class="w3-row">
       <hr>
@@ -142,8 +159,8 @@
       </div>
 
       <!-- Hide this text on small devices -->
-      <div class="w3-col m6 w3-hide-small w3-padding-large">
-        <div class="grid ">
+      <div class="w3-col m6 w3-col-small w3-padding-large">
+        <div class="skills">
           <div >
             <h3>Languages</h3>
             <ul>
@@ -162,7 +179,7 @@
             </ul>
           </div>
           <div >
-            <h3>Technologies +</h3>
+            <h3>Technologies</h3>
             <ul>
               <li>Github</li>
               <li>MongoDB</li>
