@@ -83,6 +83,14 @@
      margin: auto;
     
   }
+  .demos{
+   display: flex;
+   flex-direction: column;
+   align-items: stretch;
+ }
+ .demoCard{
+   margin-bottom: 19px;
+ }
   .skills h3{
     font-size: 16px;
   }
@@ -100,7 +108,18 @@
     text-align: center;
   }
 }
- 
+ .demoCard{
+   border: 2px;
+   border-style: solid;
+   /* padding:10px; */
+   border-color:#C3C3C3;
+   border-width: 2px;
+   margin-right: 5px;
+ }
+ .demos{
+   display: flex;
+   align-items: stretch;
+ }
   /* Turn off parallax scrolling for tablets and phones */
   @media only screen and (max-device-width: 1600px) {
 
@@ -214,19 +233,24 @@
     <p class="w3-LEFT">Feel free to view my work on github <a href="https://github.com/Maker-Mark">here</a> </p>
      
 
-    <div class="w3-row-padding w3-center w3-section">
-      <div class="w3-col m3">
+    <div class="demos w3-row-padding w3-center w3-section">
+      
+      
+      <div class=" demoCard w3-col m4 ">
         <h3>Local Roasters</h3>
+        <img src="https://i.imgur.com/HeNIOlf.gif" alt="">
         <p>Local Roasters is a mobile app that brings transparency and personalization to your coffee buying experience. </p>
       </div>
 
-      <div class="w3-col m3">
-        <h3>One Stock Shop</h3>
+      <div class="demoCard w3-col m4">
+        <h3>Codelet(WIP)</h3>
+        <img src="https://i.imgur.com/HX9i9Dr.gif" alt="">
         <p>an application which informs the user about the latest movies with reviews and a trailer</p>
       </div>
 
-      <div class="w3-col m3">
+      <div class="demoCard w3-col m4">
         <h3>UnderDog</h3>
+        <img src="https://i.imgur.com/2qkAXSw.gif" alt="">
         <p>UnderDog is a post-wall web app that allows Brooklyn College CS students to share
           helpful resources and vote on posts.</p>
       </div>
