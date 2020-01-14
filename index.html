@@ -1,327 +1,417 @@
 <!DOCTYPE html>
 <html>
-<title>Mark Goldstein's Portfolio</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<script src="https://kit.fontawesome.com/be4be1697e.js" crossorigin="anonymous"></script>
+  <title>Mark Goldstein's Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Montserrat"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  <script
+    src="https://kit.fontawesome.com/be4be1697e.js"
+    crossorigin="anonymous"
+  ></script>
 
-<style>
-  body,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: "Lato", sans-serif;
-  }
+  <style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Lato", sans-serif;
+    }
 
-  body,
-  html {
-    height: 100%;
-    color: #777;
-    line-height: 1.8;
-    font-family: Montserrat;
-    scroll-behavior: smooth;
-  }
+    body,
+    html {
+      height: 100%;
+      color: #777;
+      line-height: 1.8;
+      font-family: Montserrat;
+      scroll-behavior: smooth;
+    }
 
-  .skill-title {
-    font-family: Montserrat;
-    font-size: 1.1rem;
-    margin: 0;
-  }
+    .skill-title {
+      font-family: Montserrat;
+      font-size: 1.1rem;
+      margin: 0;
+    }
 
-  .prof-summary {
-    font-size: 1.1rem;
-    justify-content: center;
-    text-align: left;
-  }
+    .prof-summary {
+      font-size: 1.1rem;
+      justify-content: center;
+      text-align: left;
+    }
 
-  /* Create a Parallax Effect */
-  .bgimg-1,
-  .bgimg-2,
-  .bgimg-3 {
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  /* First image (Logo. Full height) */
-  .bgimg-1 {
-    background-image: url("shootingstar.gif");
-    min-height: 15%;
-  }
-
-  /* Second image (Portfolio) */
-  .bgimg-2 {
-    background-image: url("space.gif");
-    min-height: 400px;
-  }
-
-  /* Third image (Contact) */
-  .bgimg-3 {
-    background-image: url("space.gif");
-    min-height: 00px;
-  }
-
-  .w3-wide {
-    letter-spacing: 10px;
-  }
-
-  .w3-hover-opacity {
-    cursor: pointer;
-  }
-
-@media only screen and (max-width: 600px) {
-   .skills {
-     display: flex;
-     flex-direction: row;
-     margin: auto;
-    
-  }
-  .demos{
-   display: flex;
-   flex-direction: column;
-   align-items: stretch;
- }
- .demoCard{
-   margin-bottom: 19px;
- }
-  .skills h3{
-    font-size: 16px;
-  }
- .skills li {
-   font-size: 13px;
-   justify-content: left;
-
- }
- .skills ul{
-   padding-left:1em;
-   padding-right:.5em ;
- }
- .prof-summary {
-    font-size: 1.1rem;
-    text-align: center;
-  }
-}
- .demoCard{
-   border: 2px;
-   border-style: solid;
-   /* padding:10px; */
-   border-color:#C3C3C3;
-   border-width: 2px;
-   margin-right: 5px;
-   border-radius: 5px;
- }
- .demos{
-   display: flex;
-   align-items: stretch;
- }
-  /* Turn off parallax scrolling for tablets and phones */
-  @media only screen and (max-device-width: 1600px) {
-
+    /* Create a Parallax Effect */
     .bgimg-1,
     .bgimg-2,
     .bgimg-3 {
-      background-attachment: scroll;
-      min-height: 200px;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
     }
-  }
-</style>
 
-<body>
+    /* First image (Logo. Full height) */
+    .bgimg-1 {
+      background-image: url("shootingstar.gif");
+      min-height: 15%;
+    }
 
-  <!-- Navbar (sit on top) -->
-  <div class="w3-top">
-    <div class="w3-bar" id="myNavbar">
-      <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);"
-        onclick="toggleFunction()" title="Toggle Navigation Menu">
-        <i class="fa fa-bars"></i>
-      </a>
-      <a href="#home" class="w3-bar-item w3-button">HOME</a>
-      <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> About</a>
-      <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> Portfolio</a>
-      <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> Contact</a>
-      <a href="https://drive.google.com/file/d/1ZGul-3GZBNxbhVk1j5b8M1tUxxg_rvcG/view?usp=sharing" target="_blank" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-scroll"></i> Resume</a>
-    </div>
+    /* Second image (Portfolio) */
+    .bgimg-2 {
+      background-image: url("space.gif");
+      min-height: 400px;
+    }
 
-    <!-- Navbar on small screens -->
-    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-      <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">About</a>
-      <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">Portfolio</a>
-      <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">Contact</a>
-    </div>
-  </div>
+    /* Third image (Contact) */
+    .bgimg-3 {
+      background-image: url("space.gif");
+      min-height: 00px;
+    }
 
-  <!-- First Parallax Image with Logo Text -->
-  <div class="bgimg-1 w3-display-container " id="home">
-    <div class="w3-display-middle" style="white-space:nowrap;">
-      <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity"><span
-          class="w3-hide-small"></span>Mark Goldstein</span>
-    </div>
-  </div>
+    .w3-wide {
+      letter-spacing: 10px;
+    }
 
-  <!-- Container (About Section) -->
-  <div class="w3-content w3-container w3-padding-64" id="about">
-    <h3 class="w3-center">Professional Summary</h3>
-    <p class="prof-summary">
-      As an aspiring professional software engineer, my goal is to make a positive impact on the people I work with and
-      organization as a whole.
-      I have a strong background in data structures, algorithms, and enjoy applying my computer science knowledge to
-      modern technologies and frameworks to develop sustainable code.
-      Personally, computers and programming have always been a natural curiosity of mine and continue to be an active
-      passion that I share through tutorials, blog posts, and talks.
-    </p>
-    <div class="w3-row">
-      <hr>
-      <div class="w3-col m6 w3-center w3-padding-large">
+    .w3-hover-opacity {
+      cursor: pointer;
+    }
 
-        <img src="markwashere.jpg" class="w3-round w3-image w3-hover-opacity-off" alt="Photo of Me" width="400">
+    @media only screen and (max-width: 600px) {
+      .skills {
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+      }
+      .demos {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .demoCard {
+        margin-bottom: 19px;
+      }
+      .skills h3 {
+        font-size: 16px;
+      }
+      .skills li {
+        font-size: 13px;
+        justify-content: left;
+      }
+      .skills ul {
+        padding-left: 1em;
+        padding-right: 0.5em;
+      }
+      .prof-summary {
+        font-size: 1.1rem;
+        text-align: center;
+      }
+    }
+    .demoCard {
+      border: 2px;
+      border-style: solid;
+      /* padding:10px; */
+      border-color: #c3c3c3;
+      border-width: 2px;
+      margin-right: 5px;
+      border-radius: 5px;
+    }
+    .demos {
+      display: flex;
+      align-items: stretch;
+    }
+    /* Turn off parallax scrolling for tablets and phones */
+    @media only screen and (max-device-width: 1600px) {
+      .bgimg-1,
+      .bgimg-2,
+      .bgimg-3 {
+        background-attachment: scroll;
+        min-height: 200px;
+      }
+    }
+  </style>
+
+  <body>
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+      <div class="w3-bar" id="myNavbar">
+        <a
+          class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right"
+          href="javascript:void(0);"
+          onclick="toggleFunction()"
+          title="Toggle Navigation Menu"
+        >
+          <i class="fa fa-bars"></i>
+        </a>
+        <a href="#home" class="w3-bar-item w3-button">HOME</a>
+        <a href="#about" class="w3-bar-item w3-button w3-hide-small"
+          ><i class="fa fa-user"></i> About</a
+        >
+        <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"
+          ><i class="fa fa-th"></i> Portfolio</a
+        >
+        <a href="#contact" class="w3-bar-item w3-button w3-hide-small"
+          ><i class="fa fa-envelope"></i> Contact</a
+        >
+        <a
+          href="https://drive.google.com/file/d/1ZGul-3GZBNxbhVk1j5b8M1tUxxg_rvcG/view?usp=sharing"
+          target="_blank"
+          class="w3-bar-item w3-button w3-hide-small"
+          ><i class="fa fa-scroll"></i> Resume</a
+        >
       </div>
 
-      <!-- Hide this text on small devices -->
-      <div class="w3-col m6 w3-col-small w3-padding-large">
-        <div class="skills">
-          <div >
-            <h3>Languages</h3>
-            <ul>
-              <li>JavaScript (ES6+)</li>
-              <li>Java</li>
-              <li>Python</li>
-            </ul>
+      <!-- Navbar on small screens -->
+      <div
+        id="navDemo"
+        class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium"
+      >
+        <a
+          href="#about"
+          class="w3-bar-item w3-button"
+          onclick="toggleFunction()"
+          >About</a
+        >
+        <a
+          href="#portfolio"
+          class="w3-bar-item w3-button"
+          onclick="toggleFunction()"
+          >Portfolio</a
+        >
+        <a
+          href="#contact"
+          class="w3-bar-item w3-button"
+          onclick="toggleFunction()"
+          >Contact</a
+        >
+      </div>
+    </div>
+
+    <!-- First Parallax Image with Logo Text -->
+    <div class="bgimg-1 w3-display-container " id="home">
+      <div class="w3-display-middle" style="white-space:nowrap;">
+        <span
+          class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity"
+          ><span class="w3-hide-small"></span>Mark Goldstein</span
+        >
+      </div>
+    </div>
+
+    <!-- Container (About Section) -->
+    <div class="w3-content w3-container w3-padding-64" id="about">
+      <h3 class="w3-center">Professional Summary</h3>
+      <p class="prof-summary">
+        As an aspiring professional software engineer, my goal is to make a
+        positive impact on the people I work with and organization as a whole. I
+        have a strong background in data structures, algorithms, and enjoy
+        applying my computer science knowledge to modern technologies and
+        frameworks to develop sustainable code. Personally, computers and
+        programming have always been a natural curiosity of mine and continue to
+        be an active passion that I share through tutorials, blog posts, and
+        talks.
+      </p>
+      <div class="w3-row">
+        <hr />
+        <div class="w3-col m6 w3-center w3-padding-large">
+          <img
+            src="markwashere.jpg"
+            class="w3-round w3-image w3-hover-opacity-off"
+            alt="Photo of Me"
+            width="400"
+          />
+        </div>
+
+        <!-- Hide this text on small devices -->
+        <div class="w3-col m6 w3-col-small w3-padding-large">
+          <div class="skills">
+            <div>
+              <h3>Languages</h3>
+              <ul>
+                <li>JavaScript (ES6+)</li>
+                <li>Java</li>
+                <li>Python</li>
+              </ul>
+            </div>
+            <div>
+              <h3>Frameworks</h3>
+              <ul>
+                <li>React + React Native</li>
+                <li>Flask</li>
+                <li>Node</li>
+                <li>Express</li>
+              </ul>
+            </div>
+            <div>
+              <h3>Technologies</h3>
+              <ul>
+                <li>Github</li>
+                <li>MongoDB</li>
+                <li>Travis CI</li>
+                <li>Jest</li>
+              </ul>
+            </div>
           </div>
-          <div >
-            <h3>Frameworks</h3>
-            <ul>
-              <li>React + React Native</li>
-              <li>Flask</li>
-              <li>Node</li>
-              <li>Express</li>
-            </ul>
-          </div>
-          <div >
-            <h3>Technologies</h3>
-            <ul>
-              <li>Github</li>
-              <li>MongoDB</li>
-              <li>Travis CI</li>
-              <li>Jest</li>
-              <li>Unit Testing</li>
-            </ul>
-          </div>
-         
         </div>
       </div>
     </div>
 
-  </div>
-
-
-  <!-- Second Parallax Image with Portfolio Text -->
-  <div class="bgimg-2 w3-display-container w3-opacity-min">
-    <div class="w3-display-middle">
-      <span class="w3-xxlarge w3-text-white w3-wide">RECENT WORK</span>
+    <!-- Second Parallax Image with Portfolio Text -->
+    <div class="bgimg-2 w3-display-container w3-opacity-min">
+      <div class="w3-display-middle">
+        <span class="w3-xxlarge w3-text-white w3-wide">RECENT WORK</span>
+      </div>
     </div>
-  </div>
 
-  <!-- Container (Portfolio Section) -->
-  <div class="w3-content w3-container w3-padding-64" id="portfolio">
-    <div class="demos w3-row-padding w3-center w3-section">
-      
+    <!-- Container (Portfolio Section) -->
+    <div class="w3-content w3-container w3-padding-64" id="portfolio">
+      <div class="demos w3-row-padding w3-center w3-section">
         <div class="demoCard w3-col m4">
-            <h3>Codelet(WIP)</h3>
-            <img src="https://i.imgur.com/HX9i9Dr.gif" alt="">
-            <p>Codelet is a cross-platform mobile app that simplifies the coding interview prep by condensing coding problems into key decision points. <a href="https://github.com/CodeletApp/codelet-app">Git repo here</a></p>
-          </div>
+          <h3>Codelet(WIP)</h3>
+          <img src="https://i.imgur.com/HX9i9Dr.gif" alt="" />
+          <p>
+            Codelet is a cross-platform mobile app that simplifies the coding
+            interview prep by condensing coding problems into key decision
+            points.
+            <a href="https://github.com/CodeletApp/codelet-app"
+              >Git repo here</a
+            >
+          </p>
+        </div>
 
-      <div class=" demoCard w3-col m4 ">
-        <h3>Local Roasters</h3>
-        <img src="https://i.imgur.com/HeNIOlf.gif" alt="">
-        <p>Local Roasters is a mobile app that brings transparency and personalization to your coffee buying experience. <a href="https://github.com/Local-Roasters/LocalRoasters">Git repo here</a> </p>
+        <div class=" demoCard w3-col m4 ">
+          <h3>Local Roasters</h3>
+          <img src="https://i.imgur.com/HeNIOlf.gif" alt="" />
+          <p>
+            Local Roasters is a mobile app that brings transparency and
+            personalization to your coffee buying experience.
+            <a href="https://github.com/Local-Roasters/LocalRoasters"
+              >Git repo here</a
+            >
+          </p>
+        </div>
+
+        <div class="demoCard w3-col m4">
+          <h3>ContactKeeper</h3>
+          <img src="https://i.imgur.com/2qkAXSw.gif" alt="" />
+          <p>
+            ContactKeeper is a fullstack MERN web app that keep track of your
+            contacts.
+            <a href="https://github.com/Maker-Mark/ContactKeeper"
+              >Git repo here</a
+            >
+          </p>
+        </div>
       </div>
+      <p class="w3-LEFT">
+        Feel free to view all my work on github
+        <a href="https://github.com/Maker-Mark">here</a>
+      </p>
+    </div>
 
-
-      <div class="demoCard w3-col m4">
-        <h3>ContactKeeper</h3>
-        <img src="https://i.imgur.com/2qkAXSw.gif" alt="">
-        <p>ContactKeeper is a fullstack MERN web app that keep track of your contacts. <a href="https://github.com/Maker-Mark/ContactKeeper">Git repo here</a></p>
+    <!-- Modal for full size images on click-->
+    <div
+      id="modal01"
+      class="w3-modal w3-black"
+      onclick="this.style.display='none'"
+    >
+      <span
+        class="w3-button w3-large w3-black w3-display-topright"
+        title="Close Modal Image"
+        ><i class="fa fa-remove"></i
+      ></span>
+      <div
+        class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64"
+      >
+        <img id="img01" class="w3-image" />
+        <p id="caption" class="w3-opacity w3-large"></p>
       </div>
-     
     </div>
-    <p class="w3-LEFT">Feel free to view all my work on github <a href="https://github.com/Maker-Mark">here</a> </p>
-  </div>
 
-  <!-- Modal for full size images on click-->
-  <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
-    <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i
-        class="fa fa-remove"></i></span>
-    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-      <img id="img01" class="w3-image">
-      <p id="caption" class="w3-opacity w3-large"></p>
-    </div>
-  </div>
-
- 
-  <!-- Container (Contact Section) -->
-  <hr>
-  <div class="w3-content w3-container  " id="contact">
-    <h3 class="w3-LEFT">Get in touch</h3>
-    <div class="w3-row  w3-section">
-      <div class="w3-col w3-panel">
-        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-LEFT"></i>  <a href="mailto:markgoldstein12@gmail.com">
-          MarkGoldstein12@gmail.com</a><br>
-          <i class="fab fa-linkedin fa-fw w3-hover-text-black w3-xlarge w3-margin-LEFT"></i> <a href=" https://linkedin.com/in/MarkGoldstein12/">https://linkedin.com/in/MarkGoldstein12/
+    <!-- Container (Contact Section) -->
+    <hr />
+    <div class="w3-content w3-container  " id="contact">
+      <h3 class="w3-LEFT">Get in touch</h3>
+      <div class="w3-row  w3-section">
+        <div class="w3-col w3-panel">
+          <i
+            class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-LEFT"
+          ></i>
+          <a href="mailto:markgoldstein12@gmail.com">
+            MarkGoldstein12@gmail.com</a
+          ><br />
+          <i
+            class="fab fa-linkedin fa-fw w3-hover-text-black w3-xlarge w3-margin-LEFT"
+          ></i>
+          <a href=" https://linkedin.com/in/MarkGoldstein12/"
+            >https://linkedin.com/in/MarkGoldstein12/
           </a>
-      
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- Footer -->
-  <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
-    <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>Back to top</a>
-    <div class="w3-xlarge w3-section">
-      <a href="https://www.linkedin.com/in/MarkGoldstein12/"><i class="fab fa-linkedin w3-hover-opacity"></i></a>
-      <a href="https://github.com/Maker-Mark"><i class="fab fa-github w3-hover-opacity"></i></a>
-    </div>
-  
-  </footer>
+    <!-- Footer -->
+    <footer
+      class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off"
+    >
+      <a href="#home" class="w3-button w3-light-grey"
+        ><i class="fa fa-arrow-up w3-margin-right"></i>Back to top</a
+      >
+      <div class="w3-xlarge w3-section">
+        <a href="https://www.linkedin.com/in/MarkGoldstein12/"
+          ><i class="fab fa-linkedin w3-hover-opacity"></i
+        ></a>
+        <a href="https://github.com/Maker-Mark"
+          ><i class="fab fa-github w3-hover-opacity"></i
+        ></a>
+      </div>
+    </footer>
 
-  <script>
-    // Modal Image Gallery
-    function onClick(element) {
-      document.getElementById("img01").src = element.src;
-      document.getElementById("modal01").style.display = "block";
-      var captionText = document.getElementById("caption");
-      captionText.innerHTML = element.alt;
-    }
-
-    // Change style of navbar on scroll
-    window.onscroll = function () { myFunction() };
-    function myFunction() {
-      var navbar = document.getElementById("myNavbar");
-      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
-      } else {
-        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+    <script>
+      // Modal Image Gallery
+      function onClick(element) {
+        document.getElementById("img01").src = element.src;
+        document.getElementById("modal01").style.display = "block";
+        var captionText = document.getElementById("caption");
+        captionText.innerHTML = element.alt;
       }
-    }
 
-    // Used to toggle the menu on small screens when clicking on the menu button
-    function toggleFunction() {
-      var x = document.getElementById("navDemo");
-      if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-      } else {
-        x.className = x.className.replace(" w3-show", "");
+      // Change style of navbar on scroll
+      window.onscroll = function() {
+        myFunction();
+      };
+      function myFunction() {
+        var navbar = document.getElementById("myNavbar");
+        if (
+          document.body.scrollTop > 100 ||
+          document.documentElement.scrollTop > 100
+        ) {
+          navbar.className =
+            "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+        } else {
+          navbar.className = navbar.className.replace(
+            " w3-card w3-animate-top w3-white",
+            ""
+          );
+        }
       }
-    }
-  </script>
 
-</body>
-
+      // Used to toggle the menu on small screens when clicking on the menu button
+      function toggleFunction() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+        } else {
+          x.className = x.className.replace(" w3-show", "");
+        }
+      }
+    </script>
+  </body>
 </html>
